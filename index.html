@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Sacred Scents — One Scent. Chosen From Hundreds. Every Month.</title>
+<meta name="description" content="A monthly candle membership. Hundreds of scents are tested each cycle; exactly one is chosen, hand-poured, and shipped the first week of the month. Then it's gone.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sacred Scents — One Scent. Chosen From Hundreds.">
+<meta property="og:description" content="Hundreds of scents tested. One chosen. Hand-poured and shipped the first week of every month.">
+<meta property="og:image" content="assets/logo.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0A0D">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="Sacred Scents home">
+      <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <path d="M13 59V30C13 17.8 21.5 8 32 4c10.5 4 19 13.8 19 26v29" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 59h50" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
+        <path d="M24 13l-3-3M40 13l3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M32 19c5.2 6.6 9.4 10.4 9.4 16.2a9.4 9.4 0 1 1-18.8 0C22.6 29.4 26.8 25.6 32 19Z" fill="currentColor"/>
+      </svg>
+      <span class="logo-text">Sacred Scents</span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <a class="nav-link" href="#ritual">The Ritual</a>
+      <a class="nav-link" href="#selection">The Selection</a>
+      <a class="nav-link" href="#membership">Membership</a>
+      <a class="btn btn-primary" href="#membership">Become a Member</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+
+    <svg class="hero-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <path d="M13 59V30C13 17.8 21.5 8 32 4c10.5 4 19 13.8 19 26v29" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M7 59h50" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
+      <path d="M24 13l-3-3M40 13l3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M32 19c5.2 6.6 9.4 10.4 9.4 16.2a9.4 9.4 0 1 1-18.8 0C22.6 29.4 26.8 25.6 32 19Z" fill="currentColor"/>
+    </svg>
+
+    <p class="eyebrow">A monthly candle ritual</p>
+
+    <h1 class="display">
+      <span class="line">Hundreds are tested.</span>
+      <span class="line"><em>One</em> is chosen.</span>
+    </h1>
+
+    <p class="lede">
+      Every cycle we sample <span data-drop-sampled>300</span>+ scents at the Selection Table
+      and commit to exactly one. It is hand-poured, shipped the first week of the month,
+      and never made again.
+    </p>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#membership">Choose your membership</a>
+      <a class="btn btn-ghost" href="#ritual">How it works</a>
+    </div>
+
+    <p class="hero-note">
+      Join by the <strong data-cycle="cutoff">25th</strong> &mdash;
+      <strong><span data-cycle="days">0</span> <span data-cycle="daysword">days</span></strong> left &mdash;
+      to receive the <strong data-cycle="shipmonth">next</strong> drop
+    </p>
+
+  </div>
+</section>
+
+<!-- ============ STAT STRIP ============ -->
+<section class="strip">
+  <div class="strip-grid">
+    <div class="stat">
+      <div class="stat-num"><span data-proof="scentsPerCycle">300</span>+</div>
+      <div class="stat-label">Scents sampled each cycle</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-proof="chosenPerCycle">1</div>
+      <div class="stat-label">Chosen per month</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num"><span data-proof="yearsMaking">10</span>yrs</div>
+      <div class="stat-label">Hand-pouring experience</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE RITUAL ============ -->
+<section class="section-pad" id="ritual">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow">The Ritual</p>
+      <h2 class="h2">Three movements, every month.</h2>
+      <p class="lede">
+        You are not buying a catalogue. You are handing the decision to people
+        who do nothing else.
+      </p>
+    </div>
+
+    <div class="steps reveal">
+      <div class="step">
+        <p class="step-num">I</p>
+        <h3>We sample</h3>
+        <p>
+          The Sacred Scents team works through hundreds of fragrance compositions
+          &mdash; raw materials, accords, our own formulations &mdash; burning, testing,
+          rejecting. Most die on the table.
+        </p>
+      </div>
+      <div class="step">
+        <p class="step-num">II</p>
+        <h3>One is chosen</h3>
+        <p>
+          A single scent survives. It is the only thing we pour that month.
+          No alternates, no substitutions, no second-best option quietly offered.
+        </p>
+      </div>
+      <div class="step">
+        <p class="step-num">III</p>
+        <h3>It arrives</h3>
+        <p>
+          Hand-poured in small batch and shipped the first week of the month,
+          with The Scent Letter &mdash; what it is, where it came from, and what
+          it was built to do.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============ THE SELECTION ============ -->
+<section class="section-pad" id="selection">
+  <div class="wrap split">
+
+    <div class="plate reveal">
+      <svg class="plate-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <path d="M13 59V30C13 17.8 21.5 8 32 4c10.5 4 19 13.8 19 26v29" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 59h50" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M24 13l-3-3M40 13l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M32 19c5.2 6.6 9.4 10.4 9.4 16.2a9.4 9.4 0 1 1-18.8 0C22.6 29.4 26.8 25.6 32 19Z" fill="currentColor"/>
+      </svg>
+      <p class="plate-caption">The Selection Table</p>
+      <!-- TODO: swap this plate for a real photograph of the pour room
+           or the testing bench. Keep the 4:5 ratio. -->
+    </div>
+
+    <div class="prose reveal">
+      <p class="eyebrow">Why one</p>
+      <h2 class="h2">A catalogue is a compromise.</h2>
+      <p>
+        Most candle companies ask you to scroll. Forty scents, all in stock,
+        all forever. Nothing is chosen because nothing has to be.
+      </p>
+      <p>
+        We do the opposite. Every cycle begins with hundreds of candidates and
+        ends with a single survivor &mdash; the one that held up hot and cold,
+        at hour one and hour thirty, in a small room and a large one.
+      </p>
+      <p>
+        When it ships, it is finished. The mould is broken. What you burn in
+        March cannot be re-ordered in June, and that is the point: a scent you
+        cannot replace is a scent you actually pay attention to.
+      </p>
+
+      <ul class="marks">
+        <li>Hand-poured in small batch &mdash; never mass-produced to stock</li>
+        <li>Formulated in-house, not bought off a fragrance-house shelf</li>
+        <li>Retired permanently the month it ships</li>
+        <li>A decade of pour experience behind every batch</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ THIS MONTH'S DROP ============ -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="drop reveal">
+      <span class="sealed">Sealed until it ships</span>
+      <p class="eyebrow">This cycle</p>
+      <div class="drop-number" data-drop-number>No. 001</div>
+      <p class="drop-teaser" data-drop-teaser></p>
+      <p class="muted" style="max-width:46ch">
+        The name is withheld until the first week of
+        <span data-cycle="shipmonth">next month</span>. Members find out when
+        they open the box &mdash; everyone else finds out never.
+      </p>
+      <a class="btn btn-primary" href="#membership">Claim this month's drop</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEMBERSHIP ============ -->
+<section class="section-pad" id="membership">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Membership</p>
+      <h2 class="h2">Choose how many.<br>We choose which.</h2>
+      <p class="lede">
+        Every tier receives the same chosen scent. The only question is how much
+        of it you want &mdash; for yourself, your home, or the people you give to.
+      </p>
+    </div>
+
+    <div class="tiers" data-tiers>
+      <!-- rendered from js/config.js -->
+    </div>
+
+    <p class="tiers-foot">
+      Billed monthly. Skip a month or cancel anytime from your account &mdash; no calls, no retention script.<br>
+      Need more than ten, or a wholesale arrangement?
+      <a data-brand-email-href href="#">Write to us.</a>
+    </p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============ THE MAKER ============ -->
+<section class="section-pad">
+  <div class="wrap split">
+    <div class="prose reveal">
+      <p class="eyebrow">The Maker</p>
+      <h2 class="h2">Ten years of pouring. Longer with volatiles.</h2>
+      <p>
+        Sacred Scents is built on a decade of hand-pouring candles that have sat
+        on shop shelves and sold out &mdash; and, before that, years of technical
+        work in botanical extraction.
+      </p>
+      <p>
+        That background matters more than it sounds. Extraction is the study of
+        how delicate aromatic compounds behave under heat and pressure: what
+        survives, what flattens, what turns bitter. It is the same question a
+        candle asks every time you light it.
+      </p>
+      <p>
+        Most candles smell best in the jar. Ours are formulated for hour three,
+        in a real room, with the door open &mdash; because that is when anyone
+        is actually paying attention.
+      </p>
+      <!-- TODO: add a founder portrait + signature here once you have one.
+           Social proof accelerator: name the stores that carried your candles. -->
+    </div>
+
+    <div class="plate reveal">
+      <svg class="plate-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <path d="M13 59V30C13 17.8 21.5 8 32 4c10.5 4 19 13.8 19 26v29" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 59h50" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M24 13l-3-3M40 13l3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M32 19c5.2 6.6 9.4 10.4 9.4 16.2a9.4 9.4 0 1 1-18.8 0C22.6 29.4 26.8 25.6 32 19Z" fill="currentColor"/>
+      </svg>
+      <p class="plate-caption">Small batch &middot; hand-poured</p>
+      <!-- TODO: swap for a photograph of a candle burning, or the pour itself. -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Questions</p>
+      <h2 class="h2">Before you commit.</h2>
+    </div>
+
+    <div class="faq reveal">
+
+      <details>
+        <summary>What if I don't like the scent that month?</summary>
+        <div class="answer">
+          <p>
+            You can skip any month from your account, as long as you do it before
+            the <span data-cycle="cutoff">25th</span>. You will not be charged and
+            nothing will ship. Your membership picks back up the following cycle.
+          </p>
+          <p>
+            That said &mdash; the discovery is the product. Members regularly tell
+            us their favourite candle of the year was one they would never have
+            picked off a shelf.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>When am I charged, and when does it ship?</summary>
+        <div class="answer">
+          <p>
+            You are charged on the same date each month when your membership
+            renews. Orders are cut off on the <span data-cycle="cutoff">25th</span>,
+            poured in the days after, and shipped during the first week of the
+            following month.
+          </p>
+          <p>
+            Join today and your first box goes out in the first week of
+            <span data-cycle="shipmonth">next month</span>.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I cancel?</summary>
+        <div class="answer">
+          <p>
+            Anytime, in two clicks, from the billing portal linked in every receipt
+            we send. No phone call, no email chain, no offer you have to decline
+            three times. If a membership needs a retention script to survive, it
+            was not worth having.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I buy a past scent again?</summary>
+        <div class="answer">
+          <p>
+            No. When a cycle closes, that scent is retired permanently. Occasionally
+            we re-release a single archive scent for existing members at
+            The Altar tier and above &mdash; but it is never guaranteed and never
+            sold publicly.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What are the candles actually made of?</summary>
+        <div class="answer">
+          <!-- TODO: replace with your real specs before launch. Be specific —
+               this answer converts. e.g. "9 oz, coconut-apricot wax, crackling
+               wood wick, 55-60 hour burn, amber glass vessel." -->
+          <p>
+            Hand-poured in small batch using a clean-burning natural wax blend,
+            with a fragrance load tuned per scent rather than per recipe.
+            Full specifications &mdash; size, wax, wick, burn time &mdash; are listed
+            at checkout and printed on The Scent Letter in every box.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Do you ship internationally?</summary>
+        <div class="answer">
+          <!-- TODO: confirm your shipping zones before launch. -->
+          <p>
+            We ship across the United States with tracking included on every
+            membership. International shipping is opening in stages &mdash;
+            <a data-brand-email-href href="#">write to us</a> and we will tell
+            you when your country is next.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I gift a membership?</summary>
+        <div class="answer">
+          <p>
+            Yes &mdash; take The Vigil or The Altar and have the extra candles sent
+            with a gift note at no charge. For a full standalone gift membership,
+            <a data-brand-email-href href="#">write to us</a> and we will set it up
+            by hand.
+          </p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ WAITLIST / JOIN ============ -->
+<section class="section-pad join" id="join">
+  <div class="wrap section-head center reveal" style="margin-bottom:0">
+    <p class="eyebrow">The List</p>
+    <h2 class="h2">Know what was chosen<br>before anyone else.</h2>
+    <p class="lede">
+      One message a month, sent the day the scent is decided. No discount spam,
+      no re-engagement campaigns. Leave whenever you like.
+    </p>
+
+    <form class="form" data-form novalidate>
+      <label class="sr-only" for="email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Email address</label>
+      <input id="email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+      <button class="btn btn-primary" type="submit">Join the list</button>
+    </form>
+    <p class="form-msg" data-form-msg role="status" aria-live="polite"></p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+
+    <div class="footer-top">
+      <a class="logo" href="#top" aria-label="Sacred Scents home">
+        <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M13 59V30C13 17.8 21.5 8 32 4c10.5 4 19 13.8 19 26v29" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7 59h50" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/>
+          <path d="M32 19c5.2 6.6 9.4 10.4 9.4 16.2a9.4 9.4 0 1 1-18.8 0C22.6 29.4 26.8 25.6 32 19Z" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">Sacred Scents</span>
+      </a>
+
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#ritual">The Ritual</a>
+        <a href="#selection">The Selection</a>
+        <a href="#membership">Membership</a>
+        <a href="legal/shipping.html">Shipping &amp; Returns</a>
+        <a href="legal/terms.html">Terms</a>
+        <a href="legal/privacy.html">Privacy</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> Sacred Scents. All rights reserved.</p>
+      <p>
+        <a data-brand-email href="#">hello@sacredscents.com</a>
+        &nbsp;&middot;&nbsp;
+        <a data-brand-instagram="handle" href="#" rel="noopener">@sacredscents</a>
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
