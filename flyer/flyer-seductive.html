@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=816">
+<title>Sacred Scents After Dark</title>
+<style>
+  @font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 300 700; src: url(fonts/cormorant.woff2) format("woff2"); }
+  @font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 300 700; src: url(fonts/cormorant-italic.woff2) format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 100 900; src: url(fonts/inter.woff2) format("woff2"); }
+
+  :root {
+    --ink: #0B0A0D;
+    --bone: #F4EFE6;
+    --bone-dim: #B5ADA2;
+    --gold: #C9A66B;
+    --gold-lit: #E8CFA0;
+    --gold-deep: #9C7A45;
+    --line: rgba(201, 166, 107, 0.28);
+    --serif: "Cormorant Garamond", Garamond, Georgia, serif;
+    --sans: "Inter", Helvetica, Arial, sans-serif;
+  }
+
+  @page { size: 8.5in 11in; margin: 0; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { background: #2a262e; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .page {
+    position: relative;
+    width: 816px;
+    height: 1056px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: var(--ink);
+    color: var(--bone);
+    font-family: var(--sans);
+  }
+  .page::before {
+    content: ""; position: absolute; inset: 14px; z-index: 20; pointer-events: none;
+    border: 1px solid var(--line);
+  }
+
+  /* ---------- hero: ambassador, candlelit ---------- */
+  .hero { position: relative; height: 632px; }
+
+  .ambassador {
+    position: absolute; right: 0; top: 0; width: 600px; height: 634px; overflow: hidden;
+  }
+  .ambassador img {
+    width: 100%; height: 100%; object-fit: cover; object-position: 50% 0%;
+    filter: contrast(1.1) saturate(1.12) brightness(0.96) sepia(0.12);
+  }
+  /* warm candle bloom + vignette */
+  .ambassador::before {
+    content: ""; position: absolute; inset: 0; z-index: 1; mix-blend-mode: soft-light;
+    background: radial-gradient(ellipse 60% 50% at 40% 88%, rgba(255,150,60,0.75), rgba(255,120,40,0) 70%);
+  }
+  .ambassador::after {
+    content: ""; position: absolute; inset: -2px; z-index: 2;
+    background:
+      linear-gradient(to right, var(--ink) 0%, rgba(11,10,13,0.75) 10%, rgba(11,10,13,0) 34%),
+      linear-gradient(to top, var(--ink) 0%, rgba(11,10,13,0.7) 14%, rgba(11,10,13,0) 36%),
+      radial-gradient(ellipse 80% 70% at 58% 38%, rgba(11,10,13,0) 55%, rgba(11,10,13,0.55) 100%);
+  }
+
+  .lockup {
+    position: absolute; z-index: 3; left: 44px; top: 42px; width: 118px;
+  }
+
+  .pitch { position: absolute; z-index: 3; left: 44px; top: 186px; width: 300px; }
+  .pitch .kicker {
+    font-size: 9px; letter-spacing: 0.42em; color: var(--gold); font-weight: 600;
+  }
+  .pitch h1 {
+    margin-top: 14px;
+    font-family: var(--serif); font-weight: 300; font-size: 76px; line-height: 0.86;
+    letter-spacing: -0.01em; text-shadow: 0 4px 24px rgba(0,0,0,0.8);
+  }
+  .pitch h1 em { font-style: italic; color: var(--gold-lit); display: block; padding-left: 36px; }
+  .pitch p {
+    margin-top: 18px; width: 236px; font-size: 11.5px; line-height: 1.6; color: var(--bone-dim);
+  }
+  .pitch p strong { color: var(--bone); font-weight: 500; }
+
+  .quote {
+    position: absolute; z-index: 3; right: 44px; top: 448px; width: 214px; text-align: right;
+  }
+  .quote p {
+    font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 22px; line-height: 1.15;
+    color: var(--bone); text-shadow: 0 2px 14px rgba(0,0,0,0.95);
+  }
+  .quote cite {
+    display: block; margin-top: 10px; font-style: normal; font-size: 8px; letter-spacing: 0.3em;
+    color: var(--gold); font-weight: 600;
+  }
+
+  .tin {
+    position: absolute; z-index: 4; left: 200px; top: 420px; width: 280px;
+  }
+  .tin svg { width: 280px; height: 200px; }
+
+  /* ---------- seals ---------- */
+  .seals { padding: 0 56px 0; }
+  .eyebrow {
+    display: flex; align-items: center; gap: 14px; justify-content: center;
+    font-size: 9px; letter-spacing: 0.42em; color: var(--gold); font-weight: 600;
+  }
+  .eyebrow::before, .eyebrow::after { content: ""; flex: 0 0 64px; height: 1px; background: var(--line); }
+  .seal-row { display: flex; justify-content: space-between; margin-top: 14px; }
+  .seal { width: 150px; text-align: center; }
+  .seal .disc {
+    width: 88px; height: 88px; margin: 0 auto; border-radius: 50%;
+    padding: 4px; background: conic-gradient(from 200deg, var(--gold-deep), var(--gold-lit), var(--gold), var(--gold-deep), var(--gold-lit), var(--gold-deep));
+    box-shadow: 0 0 0 5px var(--ink), 0 0 0 6px var(--line), 0 10px 30px rgba(0,0,0,0.6);
+  }
+  .seal img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
+  .seal h3 { margin-top: 11px; font-family: var(--serif); font-weight: 500; font-size: 17px; line-height: 1.1; }
+  .seal small {
+    display: block; margin-top: 3px; font-size: 8px; letter-spacing: 0.24em; color: var(--bone-dim);
+    text-transform: uppercase;
+  }
+
+  /* ---------- promise ---------- */
+  .promise {
+    display: grid; grid-template-columns: 210px 1fr; gap: 28px; align-items: center;
+    padding: 16px 56px 0;
+  }
+  .promise h2 { font-family: var(--serif); font-weight: 300; font-size: 30px; line-height: 1.02; }
+  .promise h2 em { font-style: italic; color: var(--gold-lit); }
+  .promise ul {
+    list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 22px;
+  }
+  .promise li {
+    position: relative; padding-left: 20px; font-size: 10.5px; line-height: 1.45; color: var(--bone-dim);
+  }
+  .promise li strong { display: block; color: var(--bone); font-weight: 500; font-size: 11px; }
+  .promise li::before {
+    content: ""; position: absolute; left: 1px; top: 3px; width: 9px; height: 10px;
+    background: var(--gold);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  }
+
+  /* ---------- CTA band ---------- */
+  .cta {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 118px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 56px;
+    border-top: 1px solid var(--line);
+    background: linear-gradient(90deg, rgba(11,10,13,0.96) 0%, rgba(11,10,13,0.80) 55%, rgba(11,10,13,0.55) 100%),
+                url(images/candles-lit.jpg) 50% 34% / cover;
+  }
+  .cta .offer small { display: block; font-size: 8.5px; letter-spacing: 0.36em; color: var(--gold); font-weight: 600; }
+  .cta .offer b { display: block; margin-top: 6px; font-family: var(--serif); font-weight: 400; font-size: 32px; line-height: 1; }
+  .cta .offer b em { font-style: italic; color: var(--gold-lit); }
+  .cta .offer span { display: block; margin-top: 6px; font-size: 10.5px; color: var(--bone-dim); }
+  .cta .where { text-align: right; }
+  .cta .btn {
+    display: inline-block; padding: 11px 22px; border-radius: 2px;
+    background: linear-gradient(180deg, var(--gold-lit), var(--gold));
+    color: var(--ink); font-size: 10px; font-weight: 600; letter-spacing: 0.3em;
+  }
+  .cta .url { margin-top: 10px; font-family: var(--serif); font-size: 21px; letter-spacing: 0.04em; }
+  .cta .ig { margin-top: 2px; font-size: 10px; letter-spacing: 0.18em; color: var(--bone-dim); }
+
+  @media print { html, body { background: var(--ink); } .page { margin: 0; } }
+</style>
+</head>
+<body>
+
+<!-- Shared emblem geometry (double-eight mark from assets/logo-mark.svg) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="glyph" d="M70,4 L124,40 L124,80 L70,110 L124,140 L124,180 L70,216 L16,180 L16,140 L70,110 L16,80 L16,40 Z" fill="none"/>
+    <g id="emblem">
+      <g transform="translate(0,20)">
+        <use href="#glyph" stroke-width="8" stroke-linejoin="round"/>
+        <use href="#glyph" stroke-width="5" stroke-linejoin="round" transform="translate(70,110) scale(0.72) translate(-70,-110)"/>
+        <line x1="95" y1="24" x2="95" y2="96" stroke-width="6" stroke-linecap="round"/>
+        <line x1="45" y1="124" x2="45" y2="196" stroke-width="6" stroke-linecap="round"/>
+      </g>
+      <g transform="translate(135,20)">
+        <use href="#glyph" stroke-width="8" stroke-linejoin="round"/>
+        <use href="#glyph" stroke-width="5" stroke-linejoin="round" transform="translate(70,110) scale(0.72) translate(-70,-110)"/>
+        <line x1="95" y1="24" x2="95" y2="96" stroke-width="6" stroke-linecap="round"/>
+        <line x1="45" y1="124" x2="45" y2="196" stroke-width="6" stroke-linecap="round"/>
+      </g>
+    </g>
+  </defs>
+</svg>
+
+<main class="page">
+
+  <section class="hero">
+    <div class="ambassador">
+      <img src="images/ambassador.jpg" alt="The Sacred Scents ambassador by candlelight">
+    </div>
+
+    <img class="lockup" src="images/logo-stacked.png" alt="Sacred Scents — One scent · Every month">
+
+    <div class="pitch">
+      <div class="kicker">AFTER DARK</div>
+      <h1>Light me <em>slowly.</em></h1>
+      <p>Every candle is crowned with a <strong>sacred-geometry seal</strong>, cast in
+         contrasting wax and set <strong>perfectly flush</strong> with the top &mdash;
+         one seamless surface, made to be watched as it melts.</p>
+    </div>
+
+    <blockquote class="quote">
+      <p>Strike the match. Watch the seal melt. Stay a while.</p>
+      <cite>THE FACE OF SACRED SCENTS</cite>
+    </blockquote>
+
+    <div class="tin">
+      <svg viewBox="0 0 330 236" aria-label="Sacred Scents tin: emblem on the lid, logo on the side">
+        <defs>
+          <linearGradient id="side" x1="0" x2="1">
+            <stop offset="0" stop-color="#050506"/>
+            <stop offset="0.18" stop-color="#1c1a20"/>
+            <stop offset="0.34" stop-color="#34313a"/>
+            <stop offset="0.5" stop-color="#1a181d"/>
+            <stop offset="0.85" stop-color="#0c0b0e"/>
+            <stop offset="1" stop-color="#030303"/>
+          </linearGradient>
+          <linearGradient id="lidSide" x1="0" x2="1">
+            <stop offset="0" stop-color="#070708"/>
+            <stop offset="0.3" stop-color="#3a3740"/>
+            <stop offset="0.5" stop-color="#1f1d23"/>
+            <stop offset="1" stop-color="#050506"/>
+          </linearGradient>
+          <radialGradient id="lidTop" cx="0.38" cy="0.3" r="0.9">
+            <stop offset="0" stop-color="#2e2b33"/>
+            <stop offset="0.6" stop-color="#16141a"/>
+            <stop offset="1" stop-color="#0a090c"/>
+          </radialGradient>
+          <linearGradient id="foil" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#9C7A45"/>
+            <stop offset="0.35" stop-color="#F1DDB2"/>
+            <stop offset="0.55" stop-color="#C9A66B"/>
+            <stop offset="0.8" stop-color="#E8CFA0"/>
+            <stop offset="1" stop-color="#8E6D3C"/>
+          </linearGradient>
+          <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#C9A66B" stop-opacity="0.22"/>
+            <stop offset="1" stop-color="#C9A66B" stop-opacity="0"/>
+          </radialGradient>
+          <path id="sideArc" d="M64,128 A116,19 0 0 0 296,128"/>
+          <path id="sideArc2" d="M64,151 A116,17 0 0 0 296,151"/>
+        </defs>
+
+        <ellipse cx="180" cy="120" rx="160" ry="110" fill="url(#glow)"/>
+        <!-- floor shadow -->
+        <ellipse cx="182" cy="206" rx="132" ry="22" fill="#000" opacity="0.75"/>
+
+        <!-- body -->
+        <path d="M64,98 L64,192 A116,32 0 0 0 296,192 L296,98 Z" fill="url(#side)"/>
+        <!-- lid rim -->
+        <path d="M58,70 L58,100 A122,36 0 0 0 302,100 L302,70 Z" fill="url(#lidSide)"/>
+        <path d="M58,100 A122,36 0 0 0 302,100" fill="none" stroke="#000" stroke-width="1.5" opacity="0.8"/>
+        <!-- lid top -->
+        <ellipse cx="180" cy="70" rx="122" ry="36" fill="url(#lidTop)"/>
+        <ellipse cx="180" cy="70" rx="122" ry="36" fill="none" stroke="#4a4650" stroke-width="1"/>
+        <ellipse cx="180" cy="71" rx="112" ry="32" fill="none" stroke="#000" stroke-opacity="0.55" stroke-width="1.2"/>
+
+        <!-- emblem printed on lid (foreshortened onto the lid plane) -->
+        <g transform="translate(180,71) scale(1,0.30) translate(-62,-57)">
+          <g transform="scale(0.435)" stroke="url(#foil)" fill="none"><use href="#emblem"/></g>
+        </g>
+
+        <!-- logo wrapped around the side -->
+        <text font-family="Cormorant Garamond, Georgia, serif" font-size="18" letter-spacing="4.5" fill="url(#foil)" text-anchor="middle">
+          <textPath href="#sideArc" startOffset="50%">SACRED SCENTS</textPath>
+        </text>
+        <text font-family="Inter, Helvetica, sans-serif" font-size="5.6" letter-spacing="2.4" fill="#C9A66B" text-anchor="middle" font-weight="600">
+          <textPath href="#sideArc2" startOffset="50%">ONE SCENT · EVERY MONTH</textPath>
+        </text>
+
+        <!-- specular highlights -->
+        <rect x="112" y="100" width="7" height="118" fill="#fff" opacity="0.05"/>
+        <path d="M92,48 Q140,36 190,35" stroke="#fff" stroke-opacity="0.18" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="seals">
+    <div class="eyebrow">CHOOSE YOUR SEAL</div>
+    <div class="seal-row">
+      <div class="seal">
+        <div class="disc"><img src="images/seal-flower.jpg" alt=""></div>
+        <h3>Flower of Life</h3><small>Creation &middot; Unity</small>
+      </div>
+      <div class="seal">
+        <div class="disc"><img src="images/seal-hamsa.jpg" alt=""></div>
+        <h3>Hand of Hamsa</h3><small>Protection</small>
+      </div>
+      <div class="seal">
+        <div class="disc"><img src="images/seal-om.jpg" alt=""></div>
+        <h3>Om Mandala</h3><small>Stillness &middot; Focus</small>
+      </div>
+      <div class="seal">
+        <div class="disc"><img src="images/seal-metatron.jpg" alt=""></div>
+        <h3>Metatron&rsquo;s Cube</h3><small>Balance &middot; Clarity</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="promise">
+    <h2>Hundreds tested.<br><em>One chosen.</em></h2>
+    <ul>
+      <li><strong>Made without compromise</strong>Premium wax and fragrance, hand-poured in small batches.</li>
+      <li><strong>Burn-tested before release</strong>An even melt pool and a clean, steady flame.</li>
+      <li><strong>A two-tone pour</strong>Seal and top wax cure together as one flush surface.</li>
+      <li><strong>Matte black tin</strong>Gold logo on the side, our emblem on every lid.</li>
+    </ul>
+  </section>
+
+  <footer class="cta">
+    <div class="offer">
+      <small>THE MONTHLY MEMBERSHIP</small>
+      <b>Your nights, <em>delivered.</em></b>
+      <span>Memberships from $58/mo &middot; Skip or cancel anytime</span>
+    </div>
+    <div class="where">
+      <span class="btn">LIGHT ONE TONIGHT</span>
+      <div class="url">sacredscents.com</div>
+      <div class="ig">@SACREDSCENTS</div>
+    </div>
+  </footer>
+
+</main>
+</body>
+</html>
