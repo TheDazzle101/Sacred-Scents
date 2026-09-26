@@ -77,7 +77,7 @@
     font-family: var(--serif); font-weight: 300; font-size: 76px; line-height: 0.86;
     letter-spacing: -0.01em; text-shadow: 0 4px 24px rgba(0,0,0,0.8);
   }
-  .pitch h1 em { font-style: italic; color: var(--gold-lit); display: block; padding-left: 36px; }
+  .pitch h1 em { font-style: italic; display: block; padding-left: 36px; text-shadow: none; }
   .pitch p {
     margin-top: 18px; width: 236px; font-size: 11.5px; line-height: 1.6; color: var(--bone-dim);
   }
@@ -100,6 +100,27 @@
   }
   .tin svg { width: 280px; height: 200px; }
 
+  /* ---------- luxury frame ---------- */
+  .page::after {
+    content: ""; position: absolute; inset: 20px; z-index: 20; pointer-events: none;
+    border: 1px solid rgba(201,166,107,0.14);
+  }
+  .corner { position: absolute; z-index: 21; width: 26px; height: 26px; color: var(--gold); }
+  .corner.tl { left: 7px; top: 7px; }
+  .corner.tr { right: 7px; top: 7px; transform: scaleX(-1); }
+  .corner.bl { left: 7px; bottom: 7px; transform: scaleY(-1); }
+  .corner.br { right: 7px; bottom: 7px; transform: scale(-1,-1); }
+
+  .foil {
+    background: linear-gradient(100deg, #9C7A45 0%, #F1DDB2 28%, #C9A66B 48%, #FFF1D0 62%, #B38C52 82%, #E8CFA0 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  .hallmark {
+    position: absolute; z-index: 5; left: 140px; top: 500px; width: 100px; height: 100px;
+    filter: drop-shadow(0 6px 16px rgba(0,0,0,0.7));
+  }
+
   /* ---------- seals ---------- */
   .seals { padding: 0 56px 0; }
   .eyebrow {
@@ -107,37 +128,34 @@
     font-size: 9px; letter-spacing: 0.42em; color: var(--gold); font-weight: 600;
   }
   .eyebrow::before, .eyebrow::after { content: ""; flex: 0 0 64px; height: 1px; background: var(--line); }
-  .seal-row { display: flex; justify-content: space-between; margin-top: 14px; }
+  .seal-row { display: flex; justify-content: space-between; margin-top: 22px; }
   .seal { width: 150px; text-align: center; }
   .seal .disc {
-    width: 88px; height: 88px; margin: 0 auto; border-radius: 50%;
+    width: 112px; height: 112px; margin: 0 auto; border-radius: 50%;
     padding: 4px; background: conic-gradient(from 200deg, var(--gold-deep), var(--gold-lit), var(--gold), var(--gold-deep), var(--gold-lit), var(--gold-deep));
-    box-shadow: 0 0 0 5px var(--ink), 0 0 0 6px var(--line), 0 10px 30px rgba(0,0,0,0.6);
+    box-shadow: 0 0 0 5px var(--ink), 0 0 0 6px rgba(201,166,107,0.7), 0 0 0 10px var(--ink), 0 0 0 10.6px rgba(201,166,107,0.3), 0 0 36px 8px rgba(201,166,107,0.16), 0 12px 30px rgba(0,0,0,0.6);
   }
   .seal img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
-  .seal h3 { margin-top: 11px; font-family: var(--serif); font-weight: 500; font-size: 17px; line-height: 1.1; }
+  .seal h3 { margin-top: 16px; font-family: var(--serif); font-weight: 500; font-size: 17px; line-height: 1.1; }
   .seal small {
     display: block; margin-top: 3px; font-size: 8px; letter-spacing: 0.24em; color: var(--bone-dim);
     text-transform: uppercase;
   }
 
   /* ---------- promise ---------- */
-  .promise {
-    display: grid; grid-template-columns: 210px 1fr; gap: 28px; align-items: center;
-    padding: 16px 56px 0;
-  }
-  .promise h2 { font-family: var(--serif); font-weight: 300; font-size: 30px; line-height: 1.02; }
-  .promise h2 em { font-style: italic; color: var(--gold-lit); }
+  .promise { padding: 22px 56px 0; text-align: center; }
+  .promise h2 { font-family: var(--serif); font-weight: 300; font-size: 30px; line-height: 1; }
+  .promise h2 em { font-style: italic; }
   .promise ul {
-    list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 22px;
+    list-style: none; padding: 0; margin-top: 12px;
+    display: flex; justify-content: center; gap: 9px; flex-wrap: nowrap;
   }
   .promise li {
-    position: relative; padding-left: 20px; font-size: 10.5px; line-height: 1.45; color: var(--bone-dim);
+    font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--bone-dim);
+    font-weight: 500; white-space: nowrap; display: flex; align-items: center; gap: 9px;
   }
-  .promise li strong { display: block; color: var(--bone); font-weight: 500; font-size: 11px; }
-  .promise li::before {
-    content: ""; position: absolute; left: 1px; top: 3px; width: 9px; height: 10px;
-    background: var(--gold);
+  .promise li + li::before {
+    content: ""; width: 6px; height: 7px; background: var(--gold);
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   }
 
@@ -152,7 +170,7 @@
   }
   .cta .offer small { display: block; font-size: 8.5px; letter-spacing: 0.36em; color: var(--gold); font-weight: 600; }
   .cta .offer b { display: block; margin-top: 6px; font-family: var(--serif); font-weight: 400; font-size: 32px; line-height: 1; }
-  .cta .offer b em { font-style: italic; color: var(--gold-lit); }
+  .cta .offer b em { font-style: italic; }
   .cta .offer span { display: block; margin-top: 6px; font-size: 10.5px; color: var(--bone-dim); }
   .cta .where { text-align: right; }
   .cta .btn {
@@ -172,6 +190,11 @@
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <path id="glyph" d="M70,4 L124,40 L124,80 L70,110 L124,140 L124,180 L70,216 L16,180 L16,140 L70,110 L16,80 L16,40 Z" fill="none"/>
+    <g id="cornerArt">
+      <path d="M1 25 V1 H25"/><path d="M5 25 V5 H25" stroke-opacity="0.5"/>
+      <path d="M9 4 L13 1.7 L17 4 L17 8.6 L13 11 L9 8.6 Z" transform="translate(-4 3)" fill="currentColor" stroke="none"/>
+    </g>
+    <path id="hallArc" d="M52,52 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/>
     <g id="emblem">
       <g transform="translate(0,20)">
         <use href="#glyph" stroke-width="8" stroke-linejoin="round"/>
@@ -191,6 +214,11 @@
 
 <main class="page">
 
+  <svg class="corner tl" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><use href="#cornerArt"/></svg>
+  <svg class="corner tr" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><use href="#cornerArt"/></svg>
+  <svg class="corner bl" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><use href="#cornerArt"/></svg>
+  <svg class="corner br" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><use href="#cornerArt"/></svg>
+
   <section class="hero">
     <div class="ambassador">
       <img src="images/ambassador.jpg" alt="The Sacred Scents ambassador by candlelight">
@@ -199,11 +227,12 @@
     <img class="lockup" src="images/logo-stacked.png" alt="Sacred Scents — One scent · Every month">
 
     <div class="pitch">
-      <div class="kicker">AFTER DARK</div>
-      <h1>Light me <em>slowly.</em></h1>
-      <p>Every candle is crowned with a <strong>sacred-geometry seal</strong>, cast in
-         contrasting wax and set <strong>perfectly flush</strong> with the top &mdash;
-         one seamless surface, made to be watched as it melts.</p>
+      <div class="kicker">THE FIRST OF ITS KIND</div>
+      <h1>Light me <em class="foil">slowly.</em></h1>
+      <p>Nothing like it has been poured before. Every candle is crowned with a
+         <strong>sacred-geometry seal</strong>, set <strong>dead-center</strong> and
+         <strong>perfectly flush</strong> with the top wax &mdash; one flawless surface,
+         made to be watched as it melts.</p>
     </div>
 
     <blockquote class="quote">
@@ -211,6 +240,23 @@
       <cite>THE FACE OF SACRED SCENTS</cite>
     </blockquote>
 
+
+    <svg class="hallmark" viewBox="0 0 104 104" aria-label="Drop No. 001, the first pour">
+      <defs>
+        <linearGradient id="hmFoil" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#8E6D3C"/><stop offset="0.35" stop-color="#F1DDB2"/>
+          <stop offset="0.6" stop-color="#C9A66B"/><stop offset="1" stop-color="#9C7A45"/>
+        </linearGradient>
+      </defs>
+      <circle cx="52" cy="52" r="50" fill="url(#hmFoil)"/>
+      <circle cx="52" cy="52" r="47" fill="#0B0A0D"/>
+      <circle cx="52" cy="52" r="31" fill="none" stroke="url(#hmFoil)" stroke-width="0.8"/>
+      <text font-family="Inter, sans-serif" font-size="6.6" font-weight="600" letter-spacing="1.6" fill="#E8CFA0">
+        <textPath href="#hallArc" startOffset="0">THE FIRST POUR · POURED ONCE · NEVER AGAIN ·</textPath>
+      </text>
+      <text x="52" y="47" text-anchor="middle" font-family="Inter, sans-serif" font-size="5.5" font-weight="600" letter-spacing="1.8" fill="#C9A66B">DROP</text>
+      <text x="52" y="65" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="21" font-style="italic" fill="url(#hmFoil)">N&#186; 001</text>
+    </svg>
     <div class="tin">
       <svg viewBox="0 0 330 236" aria-label="Sacred Scents tin: emblem on the lid, logo on the side">
         <defs>
@@ -283,7 +329,7 @@
   </section>
 
   <section class="seals">
-    <div class="eyebrow">CHOOSE YOUR SEAL</div>
+    <div class="eyebrow">FOUR SACRED SEALS &middot; ONE PERFECT CENTER</div>
     <div class="seal-row">
       <div class="seal">
         <div class="disc"><img src="images/seal-flower.jpg" alt=""></div>
@@ -305,23 +351,23 @@
   </section>
 
   <section class="promise">
-    <h2>Hundreds tested.<br><em>One chosen.</em></h2>
+    <h2>Hundreds tested. <em class="foil">One chosen.</em></h2>
     <ul>
-      <li><strong>Made without compromise</strong>Premium wax and fragrance, hand-poured in small batches.</li>
-      <li><strong>Burn-tested before release</strong>An even melt pool and a clean, steady flame.</li>
-      <li><strong>A two-tone pour</strong>Seal and top wax cure together as one flush surface.</li>
-      <li><strong>Matte black tin</strong>Gold logo on the side, our emblem on every lid.</li>
+      <li>Hand-poured in small batches</li>
+      <li>Burn-tested before release</li>
+      <li>Seal set dead-center &amp; flush</li>
+      <li>Matte black &amp; gold tin</li>
     </ul>
   </section>
 
   <footer class="cta">
     <div class="offer">
-      <small>THE MONTHLY MEMBERSHIP</small>
-      <b>Your nights, <em>delivered.</em></b>
-      <span>Memberships from $58/mo &middot; Skip or cancel anytime</span>
+      <small>FOUNDING MEMBERSHIP &middot; DROP N&ordm; 001</small>
+      <b>Be among the <em class="foil">first.</em></b>
+      <span>Each scent is poured once &mdash; then it&rsquo;s gone forever.<br>Memberships from $58/mo &middot; Skip or cancel anytime</span>
     </div>
     <div class="where">
-      <span class="btn">LIGHT ONE TONIGHT</span>
+      <span class="btn">CLAIM YOUR PLACE</span>
       <div class="url">sacredscents.com</div>
       <div class="ig">@SACREDSCENTS</div>
     </div>
