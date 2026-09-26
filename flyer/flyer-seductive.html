@@ -49,7 +49,7 @@
   }
   .ambassador img {
     width: 100%; height: 100%; object-fit: cover; object-position: 50% 0%;
-    filter: contrast(1.1) saturate(1.12) brightness(0.96) sepia(0.12);
+    filter: contrast(1.28) saturate(0.82) brightness(0.9) sepia(0.18);
   }
   /* warm candle bloom + vignette */
   .ambassador::before {
@@ -79,7 +79,7 @@
   }
   .pitch h1 em { font-style: italic; display: block; padding-left: 36px; text-shadow: none; }
   .pitch p {
-    margin-top: 18px; width: 236px; font-size: 11.5px; line-height: 1.6; color: var(--bone-dim);
+    margin-top: 18px; width: 214px; font-size: 11.5px; line-height: 1.6; color: var(--bone-dim);
   }
   .pitch p strong { color: var(--bone); font-weight: 500; }
 
@@ -96,9 +96,9 @@
   }
 
   .tin {
-    position: absolute; z-index: 4; left: 200px; top: 420px; width: 280px;
+    position: absolute; z-index: 4; left: 250px; top: 384px; width: 268px;
   }
-  .tin svg { width: 280px; height: 200px; }
+  .tin svg { width: 268px; height: 236px; }
 
   /* ---------- luxury frame ---------- */
   .page::after {
@@ -117,7 +117,7 @@
   }
 
   .hallmark {
-    position: absolute; z-index: 5; left: 140px; top: 500px; width: 100px; height: 100px;
+    position: absolute; z-index: 5; left: 160px; top: 518px; width: 96px; height: 96px;
     filter: drop-shadow(0 6px 16px rgba(0,0,0,0.7));
   }
 
@@ -236,7 +236,7 @@
     </div>
 
     <blockquote class="quote">
-      <p>Strike the match. Watch the seal melt. Stay a while.</p>
+      <p>Everybody wants one. Not everybody gets one.</p>
       <cite>THE FACE OF SACRED SCENTS</cite>
     </blockquote>
 
@@ -258,72 +258,66 @@
       <text x="52" y="65" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="21" font-style="italic" fill="url(#hmFoil)">N&#186; 001</text>
     </svg>
     <div class="tin">
-      <svg viewBox="0 0 330 236" aria-label="Sacred Scents tin: emblem on the lid, logo on the side">
+      <svg viewBox="0 0 330 290" aria-label="Sacred Scents tin: logo on the lid, wordmark on the side">
         <defs>
           <linearGradient id="side" x1="0" x2="1">
-            <stop offset="0" stop-color="#050506"/>
-            <stop offset="0.18" stop-color="#1c1a20"/>
-            <stop offset="0.34" stop-color="#34313a"/>
-            <stop offset="0.5" stop-color="#1a181d"/>
-            <stop offset="0.85" stop-color="#0c0b0e"/>
-            <stop offset="1" stop-color="#030303"/>
+            <stop offset="0" stop-color="#050506"/><stop offset="0.18" stop-color="#1c1a20"/>
+            <stop offset="0.34" stop-color="#34313a"/><stop offset="0.5" stop-color="#1a181d"/>
+            <stop offset="0.85" stop-color="#0c0b0e"/><stop offset="1" stop-color="#030303"/>
           </linearGradient>
           <linearGradient id="lidSide" x1="0" x2="1">
-            <stop offset="0" stop-color="#070708"/>
-            <stop offset="0.3" stop-color="#3a3740"/>
-            <stop offset="0.5" stop-color="#1f1d23"/>
-            <stop offset="1" stop-color="#050506"/>
+            <stop offset="0" stop-color="#070708"/><stop offset="0.3" stop-color="#3a3740"/>
+            <stop offset="0.5" stop-color="#1f1d23"/><stop offset="1" stop-color="#050506"/>
           </linearGradient>
-          <radialGradient id="lidTop" cx="0.38" cy="0.3" r="0.9">
-            <stop offset="0" stop-color="#2e2b33"/>
-            <stop offset="0.6" stop-color="#16141a"/>
-            <stop offset="1" stop-color="#0a090c"/>
+          <radialGradient id="lidTop" cx="0.36" cy="0.28" r="0.95">
+            <stop offset="0" stop-color="#2c2931"/><stop offset="0.6" stop-color="#141217"/><stop offset="1" stop-color="#09080b"/>
           </radialGradient>
           <linearGradient id="foil" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#9C7A45"/>
-            <stop offset="0.35" stop-color="#F1DDB2"/>
-            <stop offset="0.55" stop-color="#C9A66B"/>
-            <stop offset="0.8" stop-color="#E8CFA0"/>
-            <stop offset="1" stop-color="#8E6D3C"/>
+            <stop offset="0" stop-color="#9C7A45"/><stop offset="0.35" stop-color="#F1DDB2"/>
+            <stop offset="0.55" stop-color="#C9A66B"/><stop offset="0.8" stop-color="#E8CFA0"/><stop offset="1" stop-color="#8E6D3C"/>
           </linearGradient>
           <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
-            <stop offset="0" stop-color="#C9A66B" stop-opacity="0.22"/>
-            <stop offset="1" stop-color="#C9A66B" stop-opacity="0"/>
+            <stop offset="0" stop-color="#C9A66B" stop-opacity="0.24"/><stop offset="1" stop-color="#C9A66B" stop-opacity="0"/>
           </radialGradient>
-          <path id="sideArc" d="M64,128 A116,19 0 0 0 296,128"/>
-          <path id="sideArc2" d="M64,151 A116,17 0 0 0 296,151"/>
+          <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0.2" stop-color="#fff" stop-opacity="0"/><stop offset="0.45" stop-color="#fff" stop-opacity="0.07"/><stop offset="0.6" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <clipPath id="lidClip"><ellipse cx="165" cy="95" rx="124" ry="56"/></clipPath>
+          <path id="sideArc" d="M45,208 A120,30 0 0 0 285,208"/>
+          <path id="sideArc2" d="M45,226 A120,28 0 0 0 285,226"/>
         </defs>
 
-        <ellipse cx="180" cy="120" rx="160" ry="110" fill="url(#glow)"/>
-        <!-- floor shadow -->
-        <ellipse cx="182" cy="206" rx="132" ry="22" fill="#000" opacity="0.75"/>
+        <ellipse cx="165" cy="150" rx="165" ry="140" fill="url(#glow)"/>
+        <ellipse cx="167" cy="266" rx="140" ry="24" fill="#000" opacity="0.8"/>
 
         <!-- body -->
-        <path d="M64,98 L64,192 A116,32 0 0 0 296,192 L296,98 Z" fill="url(#side)"/>
+        <path d="M35,121 L35,205 A130,60 0 0 0 295,205 L295,121 Z" fill="url(#side)"/>
         <!-- lid rim -->
-        <path d="M58,70 L58,100 A122,36 0 0 0 302,100 L302,70 Z" fill="url(#lidSide)"/>
-        <path d="M58,100 A122,36 0 0 0 302,100" fill="none" stroke="#000" stroke-width="1.5" opacity="0.8"/>
+        <path d="M30,95 L30,123 A135,62 0 0 0 300,123 L300,95 Z" fill="url(#lidSide)"/>
+        <path d="M30,123 A135,62 0 0 0 300,123" fill="none" stroke="#000" stroke-width="1.5" opacity="0.85"/>
         <!-- lid top -->
-        <ellipse cx="180" cy="70" rx="122" ry="36" fill="url(#lidTop)"/>
-        <ellipse cx="180" cy="70" rx="122" ry="36" fill="none" stroke="#4a4650" stroke-width="1"/>
-        <ellipse cx="180" cy="71" rx="112" ry="32" fill="none" stroke="#000" stroke-opacity="0.55" stroke-width="1.2"/>
+        <ellipse cx="165" cy="95" rx="135" ry="62" fill="url(#lidTop)"/>
+        <ellipse cx="165" cy="95" rx="135" ry="62" fill="none" stroke="#4a4650" stroke-width="1"/>
+        <ellipse cx="165" cy="96" rx="124" ry="56" fill="none" stroke="#000" stroke-opacity="0.6" stroke-width="1.2"/>
 
-        <!-- emblem printed on lid (foreshortened onto the lid plane) -->
-        <g transform="translate(180,71) scale(1,0.30) translate(-62,-57)">
-          <g transform="scale(0.435)" stroke="url(#foil)" fill="none"><use href="#emblem"/></g>
+        <!-- the actual Sacred Scents logo, printed across the lid -->
+        <g clip-path="url(#lidClip)">
+          <g transform="translate(165,95) scale(1,0.46)">
+            <image href="images/logo-stacked.png" x="-88" y="-81" width="176" height="154.6" preserveAspectRatio="xMidYMid meet"/>
+          </g>
+          <ellipse cx="165" cy="95" rx="124" ry="56" fill="url(#sheen)"/>
         </g>
 
-        <!-- logo wrapped around the side -->
-        <text font-family="Cormorant Garamond, Georgia, serif" font-size="18" letter-spacing="4.5" fill="url(#foil)" text-anchor="middle">
+        <!-- wordmark wrapped around the side -->
+        <text font-family="Cormorant Garamond, Georgia, serif" font-size="19" letter-spacing="5" fill="url(#foil)" text-anchor="middle">
           <textPath href="#sideArc" startOffset="50%">SACRED SCENTS</textPath>
         </text>
-        <text font-family="Inter, Helvetica, sans-serif" font-size="5.6" letter-spacing="2.4" fill="#C9A66B" text-anchor="middle" font-weight="600">
+        <text font-family="Inter, Helvetica, sans-serif" font-size="5.8" letter-spacing="2.4" fill="#C9A66B" text-anchor="middle" font-weight="600">
           <textPath href="#sideArc2" startOffset="50%">ONE SCENT · EVERY MONTH</textPath>
         </text>
 
-        <!-- specular highlights -->
-        <rect x="112" y="100" width="7" height="118" fill="#fff" opacity="0.05"/>
-        <path d="M92,48 Q140,36 190,35" stroke="#fff" stroke-opacity="0.18" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <rect x="80" y="126" width="7" height="120" fill="#fff" opacity="0.05"/>
+        <path d="M70,58 Q120,38 180,34" stroke="#fff" stroke-opacity="0.16" stroke-width="1.4" fill="none" stroke-linecap="round"/>
       </svg>
     </div>
   </section>
