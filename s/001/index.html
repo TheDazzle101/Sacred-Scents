@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- This page is what the QR code on the side of every Nº 001 tin opens.
+     Fill in every [BRACKETED] value before the drop ships. -->
+<title>Nº 001 — The Story of This Candle · Sacred Scents</title>
+<meta name="description" content="Scanned from the side of your tin: how Sacred Scents Nº 001 was chosen from hundreds, poured, sealed and burn-tested.">
+<meta name="theme-color" content="#0B0A0D">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0B0A0D; --ink-2: #121016; --ink-3: #1B1821;
+    --bone: #F4EFE6; --bone-dim: #A49C91;
+    --gold: #C9A66B; --gold-lit: #E8CFA0;
+    --line: rgba(201,166,107,0.22);
+    --serif: "Cormorant Garamond", Garamond, Georgia, serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--ink); color: var(--bone); font-family: var(--sans); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+  .eyebrow { font-size: 11px; letter-spacing: 0.38em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 300; line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 6vw, 3.2rem); margin-top: 10px; }
+  h2 em, h1 em { font-style: italic; color: var(--gold-lit); }
+  .lede { color: var(--bone-dim); max-width: 60ch; margin-top: 16px; }
+  .todo { color: var(--gold-lit); border-bottom: 1px dashed var(--gold); }
+
+  /* hero */
+  .hero { position: relative; min-height: 92vh; display: grid; place-items: end center; text-align: center; overflow: hidden; }
+  .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, var(--ink) 8%, rgba(11,10,13,0.4) 55%, var(--ink) 100%); }
+  .hero-inner { position: relative; z-index: 1; padding: 0 20px 64px; }
+  .hero .logo { width: 150px; margin: 0 auto 28px; }
+  .hero h1 { font-size: clamp(3.4rem, 14vw, 7rem); }
+  .hero p { color: var(--bone-dim); max-width: 34ch; margin: 14px auto 0; }
+  .scanned { display: inline-block; margin-bottom: 18px; padding: 6px 14px; border: 1px solid var(--line); font-size: 10px; letter-spacing: 0.3em; color: var(--gold); }
+
+  section { padding: 80px 0; border-top: 1px solid var(--line); }
+
+  /* notes */
+  .notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); margin-top: 36px; }
+  .notes div { background: var(--ink); padding: 22px 18px; }
+  .notes b { display: block; font-size: 10px; letter-spacing: 0.3em; color: var(--gold); font-weight: 600; }
+  .notes span { display: block; margin-top: 6px; font-family: var(--serif); font-size: 1.35rem; line-height: 1.2; }
+  .teaser { font-family: var(--serif); font-style: italic; font-size: clamp(1.4rem, 4vw, 2rem); line-height: 1.3; margin-top: 28px; color: var(--bone); }
+
+  /* chapters */
+  .chapter { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
+  .chapter + .chapter { margin-top: 72px; }
+  .chapter.flip .media { order: 2; }
+  .media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--line); }
+  .num { font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--gold); }
+  .chapter h3 { font-size: clamp(1.8rem, 4.5vw, 2.4rem); margin-top: 4px; }
+  .chapter p { color: var(--bone-dim); margin-top: 12px; }
+
+  /* seals */
+  .seals { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; text-align: center; }
+  .seals img { width: 100%; aspect-ratio: 1; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); box-shadow: 0 0 0 6px var(--ink), 0 0 0 7px var(--line); }
+  .seals h4 { font-family: var(--serif); font-weight: 400; font-size: 1.2rem; margin-top: 16px; }
+  .seals small { font-size: 10px; letter-spacing: 0.2em; color: var(--bone-dim); text-transform: uppercase; }
+
+  /* timeline */
+  .timeline { list-style: none; padding: 0; margin-top: 36px; border-left: 1px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 28px 28px; }
+  .timeline li::before { content: ""; position: absolute; left: -6px; top: 7px; width: 11px; height: 12px; background: var(--gold); clip-path: polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%); }
+  .timeline b { display: block; font-family: var(--serif); font-weight: 400; font-size: 1.35rem; }
+  .timeline span { color: var(--bone-dim); font-size: 14px; }
+
+  /* gallery */
+  .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 36px; }
+  .gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--line); }
+  .gallery .wide { grid-column: 1 / -1; aspect-ratio: 27 / 8; }
+
+  .cta { text-align: center; }
+  .btn { display: inline-block; margin-top: 28px; padding: 16px 30px; background: linear-gradient(180deg, var(--gold-lit), var(--gold)); color: var(--ink); text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 0.3em; }
+  footer { padding: 36px 0 48px; text-align: center; font-size: 12px; color: var(--bone-dim); border-top: 1px solid var(--line); }
+
+  @media (max-width: 720px) {
+    section { padding: 56px 0; }
+    .chapter { grid-template-columns: 1fr; gap: 20px; }
+    .chapter.flip .media { order: 0; }
+    .seals { grid-template-columns: repeat(2, 1fr); }
+    .notes { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: 1fr; }
+    .gallery .wide { aspect-ratio: 16 / 9; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="img/burn-test.jpg" alt="">
+  <div class="hero-inner">
+    <img class="logo" src="img/logo-stacked.png" alt="Sacred Scents">
+    <div class="scanned">YOU SCANNED YOUR TIN</div>
+    <p class="eyebrow">Drop &middot; The First Pour</p>
+    <h1>N&ordm; <em>001</em></h1>
+    <p>This is the story of the candle in your hands &mdash; how it was chosen, poured, sealed and tested before it was ever yours.</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- THE SCENT -->
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">The Scent</p>
+      <h2><span class="todo">[Scent name]</span></h2>
+      <p class="teaser">&ldquo;Resinous. Cold-pressed citrus peel over something older and darker underneath.&rdquo;</p>
+      <div class="notes">
+        <div><b>TOP</b><span class="todo">[Top notes]</span></div>
+        <div><b>HEART</b><span class="todo">[Heart notes]</span></div>
+        <div><b>BASE</b><span class="todo">[Base notes]</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE MAKING -->
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">The Making</p>
+      <h2>Hundreds tested. <em>One chosen.</em></h2>
+
+      <div class="chapter" style="margin-top:44px">
+        <div class="media"><img src="img/testing-shelf.jpg" alt="Rows of test candles on the testing shelf" loading="lazy"></div>
+        <div>
+          <div class="num">I.</div>
+          <h3>The testing shelf</h3>
+          <p>Every cycle starts here. <span class="todo">[300]</span> scents are poured into test tins,
+             cured, burned and judged side by side &mdash; for throw, for the melt pool, for how the room
+             feels an hour later. Most never leave this shelf.</p>
+        </div>
+      </div>
+
+      <div class="chapter flip">
+        <div class="media"><img src="img/pours-close.jpg" alt="Close-up of test pours in different colors" loading="lazy"></div>
+        <div>
+          <div class="num">II.</div>
+          <h3>The choosing</h3>
+          <p>One survives. It becomes the only scent poured that month &mdash; and once this drop ships,
+             it is retired for good. <span class="todo">[A line about why this scent won.]</span></p>
+        </div>
+      </div>
+
+      <div class="chapter">
+        <div class="media"><img src="img/seals-top.jpg" alt="Six candles, each crowned with a sacred-geometry seal" loading="lazy"></div>
+        <div>
+          <div class="num">III.</div>
+          <h3>The pour &amp; the seal</h3>
+          <p>Hand-poured in small batches. Each candle is crowned with a sacred-geometry seal, cast in
+             contrasting wax and set dead-center and perfectly flush with the top &mdash; so the surface
+             reads as one seamless piece.</p>
+        </div>
+      </div>
+
+      <div class="chapter flip">
+        <div class="media"><img src="img/burn-test.jpg" alt="Three candles burning during the burn test" loading="lazy"></div>
+        <div>
+          <div class="num">IV.</div>
+          <h3>The burn test</h3>
+          <p>Before a single one is sold, the batch is lit and watched &mdash; an even melt pool, a clean,
+             steady flame, and the seal melting into the pool the way it should.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SEALS -->
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">The Seals</p>
+      <h2>Which one <em>chose you?</em></h2>
+      <div class="seals">
+        <div><img src="img/seal-flower.jpg" alt="Flower of Life seal" loading="lazy"><h4>Flower of Life</h4><small>Creation &middot; Unity</small></div>
+        <div><img src="img/seal-hamsa.jpg" alt="Hand of Hamsa seal" loading="lazy"><h4>Hand of Hamsa</h4><small>Protection</small></div>
+        <div><img src="img/seal-om.jpg" alt="Om Mandala seal" loading="lazy"><h4>Om Mandala</h4><small>Stillness &middot; Focus</small></div>
+        <div><img src="img/seal-metatron.jpg" alt="Metatron's Cube seal" loading="lazy"><h4>Metatron&rsquo;s Cube</h4><small>Balance &middot; Clarity</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE RECORD -->
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">The Record</p>
+      <h2>The life of <em>N&ordm; 001</em></h2>
+      <ol class="timeline">
+        <li><b>Sampled</b><span class="todo">[Date]</span> <span>&mdash; <span class="todo">[300]</span> scents poured and burned.</span></li>
+        <li><b>Chosen</b><span class="todo">[Date]</span> <span>&mdash; one scent kept, the rest retired.</span></li>
+        <li><b>Poured &amp; sealed</b><span class="todo">[Date]</span> <span>&mdash; batch of <span class="todo">[number]</span>, hand-poured.</span></li>
+        <li><b>Burn-tested</b><span class="todo">[Date]</span> <span>&mdash; passed.</span></li>
+        <li><b>Shipped</b><span class="todo">[Date]</span> <span>&mdash; and never poured again.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">From the Studio</p>
+      <h2>Behind <em>the pour</em></h2>
+      <div class="gallery">
+        <img class="wide" src="img/the-shelf.jpg" alt="A full shelf of test candles in many colors" loading="lazy">
+        <img src="img/set-of-six.jpg" alt="Six finished candles in black tins" loading="lazy">
+        <img src="img/seal-metatron.jpg" alt="Metatron's Cube seal on pink wax" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap">
+      <p class="eyebrow">Founding Membership</p>
+      <h2>Never miss <em>the next one.</em></h2>
+      <p class="lede" style="margin-left:auto;margin-right:auto">One scent, chosen from hundreds, every month. Each is poured once &mdash; then it&rsquo;s gone forever.</p>
+      <a class="btn" href="../../#membership">CLAIM YOUR PLACE</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">Sacred Scents &middot; <a href="../../">sacredscents.com</a> &middot; @sacredscents</div>
+</footer>
+
+</body>
+</html>
